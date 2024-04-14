@@ -2,16 +2,23 @@
 # if the card is not found then return -1
 # if the length of cards is 0 then return -1 as well
 # for repititions just give first occurance and return
+# def locate_card(cards, query):
+#     position = 0
+#     if len(cards) == 0:
+#         return -1
+#     while True:
+#         if cards[position] == query:
+#             return position
+#         position += 1
+#         if position == len(cards):
+#             return -1
 def locate_card(cards, query):
     position = 0
-    if len(cards) == 0:
-        return -1
-    while True:
+    while position < len(cards):
         if cards[position] == query:
             return position
         position += 1
-        if position == len(cards):
-            return -1
+    return -1
 
 
 tests = []
